@@ -1,1 +1,21 @@
-<p>contact-detail works!</p>
+<div class="contact_detail">
+  <div class="contact_detail-top">
+    <div class="contact_detail-top-name">
+      {{ contact && contact?.name }}
+    </div>
+    <div class="contact_detail-middle">
+      <img src="{{ contact && contact?.imageUrl }}" />
+
+      <div class="buttons">
+        <button class="btn-primary">Edit</button>
+        <button class="btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact_detail-bottom">
+    <div>Email: {{ contact && contact?.email }}</div>
+    <div>Phone: {{ contact && contact?.phone }}</div>
+  </div>
+</div>
+{{ console.log(contact) }}

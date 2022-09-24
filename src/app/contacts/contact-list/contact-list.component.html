@@ -1,5 +1,14 @@
-<p>contact-list works!</p>
-<div *ngFor="let contact of contacts">
-  <p>{{ contact?.name }}</p>
-  <img src="{{ contact?.imageUrl }}" />
+<div class="contacts_list">
+  <div class="top_panel">
+    <div>Contacts</div>
+    <button class="btn-success">New Contact</button>
+  </div>
+
+  <div class="contacts-info">
+    <a href="*" *ngFor="let contact of contacts; index as i">
+      <!-- <div>{{ i + 1 }}</div> -->
+      <p>{{ contact?.name }}</p>
+      <img src="{{ contact?.imageUrl }}" />
+    </a>
+  </div>
 </div>
