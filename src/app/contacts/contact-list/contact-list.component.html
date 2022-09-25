@@ -1,14 +1,27 @@
-<div class="contacts_list">
-  <div class="top_panel">
-    <div>Contacts</div>
-    <button class="btn-success">New Contact</button>
+<div class="row">
+  <div class="col-xs-12 bg-default">
+    <div class="pull-left">Contacts</div>
+    <button class="btn btn-success pull-right" (click)="addContact()">
+      New Contact
+    </button>
   </div>
-
-  <div class="contacts-info">
-    <a href="*" *ngFor="let contact of contacts; index as i">
-      <!-- <div>{{ i + 1 }}</div> -->
-      <p>{{ contact?.name }}</p>
-      <img src="{{ contact?.imageUrl }}" />
-    </a>
+  <!-- <hr /> -->
+  <div class="row">
+    <div class="col-xs-12">
+      <a
+        href="*"
+        *ngFor="let contact of contacts"
+        class="list-group-item clearfix"
+      >
+        <div class="pull-left">
+          <h4 class="list-group-item-heading">{{ contact?.name }}</h4>
+        </div>
+        <img
+          src="{{ contact?.imageUrl }}"
+          class="pull-right"
+          style="max-height: 80px"
+        />
+      </a>
+    </div>
   </div>
 </div>
