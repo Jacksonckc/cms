@@ -1,27 +1,37 @@
-<div class="row">
-  <h2 class="col-xs-12">
-    {{ contact && contact?.name }}
-  </h2>
-</div>
-<div>
-  <div class="row">
-    <div class="pull-left">
-      <img src="{{ contact && contact?.imageUrl }}" />
+<div class="border-1-s-light-all br-md">
+  <div class="p-0 bg-gray">
+    <div class="row">
+      <h2 class="col-xs-12">
+        {{ contact && contact?.name }}
+      </h2>
     </div>
-    <div class="pull-right">
-      <button class="btn btn-primary" (click)="editContact($event)">
-        Edit
-      </button>
-      <button class="btn btn-danger" (click)="deleteContact($event)">
-        Delete
-      </button>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="pull-left">
+          <img
+            src="{{ contact && contact?.imageUrl }}"
+            style="max-width: 100px"
+          />
+        </div>
+        <div class="pull-right btn-group" style="top: 60px">
+          <button class="btn btn-primary" (click)="editContact($event)">
+            Edit
+          </button>
+          <button class="btn btn-danger" (click)="deleteContact($event)">
+            Delete
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-xs-12">
-    <div>Email: {{ contact && contact?.email }}</div>
-    <div>Phone: {{ contact && contact?.phone }}</div>
+  <div class="border-1-s-light-top p-0">
+    <div class="row">
+      <div class="col-xs-12">
+        <div>Email: {{ contact && contact?.email }}</div>
+        <div>Phone: {{ contact && contact?.phone }}</div>
+      </div>
+    </div>
   </div>
 </div>
